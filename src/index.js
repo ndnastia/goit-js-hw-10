@@ -8,7 +8,7 @@ const DEBOUNCE_DELAY = 300;
 
 const input = document.querySelector('#search-box');
 const list = document.querySelector('.country-list');
-const box = document.queryCommandIndeterm('.country-info');
+const box = document.querySelector('.country-info');
 
 
 
@@ -75,7 +75,7 @@ function boxMarkup(arr) {
      </div>
      <h2>Capital: ${capital}</h2>
      <h2>Population: ${population}</h2>
-     <h2>Languages: ${languages}</h2>`
+     <h2>Languages: ${Object.values(languages).join(', ')}</h2>`
       )
       .join('');
 }
