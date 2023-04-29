@@ -27,8 +27,9 @@ function onInput(evt) {
     fetchCountries(inputValue).then((data) => {
         if (data.length > 10) {
             Notify.warning(
-                'Too many matches found. Please enter a more specific name.'
+              'Too many matches found. Please enter a more specific name.'
             )
+                resetMarkup(list);
                 return;
         } else if (data.length >= 2 && data.length <= 10) {
             resetMarkup(list);
